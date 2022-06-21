@@ -11,7 +11,6 @@ type configurationListHandler struct {
 	environment       string
 	environment_type  string
 	ui_theme          string
-	/*region            string
 	paypal_url        string
 	db_user           string
 	db_password       string
@@ -20,6 +19,7 @@ type configurationListHandler struct {
 	page_limit        string
 	sorting           string
 	number_of_buckets string
+	/*region            string
 	external_system_host string
 	*/
 }
@@ -31,7 +31,6 @@ func (h *configurationListHandler) ServeHTTP(w http.ResponseWriter, r *http.Requ
 	fmt.Fprintf(w, "<li>environment: "+h.environment+"</li>")
 	fmt.Fprintf(w, "<li>environment_type: "+h.environment_type+"</li>")
 	fmt.Fprintf(w, "<li>ui_theme: "+h.ui_theme+"</li>")
-	/*fmt.Fprintf(w, "<li>region: "+h.region+"</li>")
 	fmt.Fprintf(w, "<li>paypal_url: "+h.paypal_url+"</li>")
 	fmt.Fprintf(w, "<li>db_user: "+h.db_user+"</li>")
 	fmt.Fprintf(w, "<li>db_password: "+h.db_password+"</li>")
@@ -40,6 +39,7 @@ func (h *configurationListHandler) ServeHTTP(w http.ResponseWriter, r *http.Requ
 	fmt.Fprintf(w, "<li>page_limit: "+h.page_limit+"</li>")
 	fmt.Fprintf(w, "<li>sorting: "+h.sorting+"</li>")
 	fmt.Fprintf(w, "<li>number_of_buckets: "+h.number_of_buckets+"</li>")
+	/*fmt.Fprintf(w, "<li>region: "+h.region+"</li>")
 	fmt.Fprintf(w, "<li>external_system_host: "+h.external_system_host+"</li>")
 	*/
 	fmt.Fprintf(w, "</ol>")
@@ -58,7 +58,6 @@ func main() {
 	clh.environment = os.Getenv("ENV")
 	clh.environment_type = os.Getenv("ENV_TYPE")
 	clh.ui_theme = os.Getenv("UI_THEME")
-	/*clh.region = os.Getenv("REGION")
 	clh.paypal_url = os.Getenv("PAYPAL_URL")
 	clh.db_user = os.Getenv("DB_USER")
 	clh.db_password = os.Getenv("DB_PASSWORD")
@@ -67,6 +66,7 @@ func main() {
 	clh.page_limit = os.Getenv("PAGE_LIMIT")
 	clh.sorting = os.Getenv("SORTING")
 	clh.number_of_buckets = os.Getenv("N_BUCKETS")
+	/*clh.region = os.Getenv("REGION")
 	clh.external_system_host = os.Getenv("EXTERNAL_SYSTEM_HOST")
 	*/
 	fmt.Println("Simple web server is starting on port 8080...")
