@@ -1,3 +1,3 @@
-module github.com/kostis-codefresh/gitops-promotion-source-code
+module github.com/JavadZahrabi/gitops-environment-promotion-source-code_03
 
 go 1.17
